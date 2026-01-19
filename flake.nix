@@ -16,6 +16,7 @@
       self,
       nixpkgs,
       home-manager,
+      nixvim,
       ...
     }:
     {
@@ -24,6 +25,7 @@
         modules = [
           ./configuration.nix
           home-manager.nixosModules.home-manager
+	  nixvim.homeModules.nixvim
           {
             home-manager = {
               useGlobalPkgs = true;
