@@ -3,7 +3,7 @@
   # Leader
   globals.mapleader = " ";
   # Color Scheme
-  colorschemes.everforest.enable = true;
+  colorschemes.gruvbox.enable = true;
   # Plugins
   plugins = {
       mini-pairs.enable = true;
@@ -14,11 +14,14 @@
       todo-comments.enable = true;
       highlight-colors.enable = true;
       emmet.enable = true;
+      mini-icons = {
+	enable = true;
+	mockDevIcons = true;
+	};
       treesitter = {
 	enable = true;
 	highlight.enable = true;
 	indent.enable = true;
-	folding.enable = true;
       };
       telescope = {
 	enable = true;
@@ -59,9 +62,6 @@
 	  default_file_explorer = true;
 	  skip_confirm_for_simple_edits = true;
 	  view_options.show_hidden = true;
-	  keymaps = {
-	    "\\" = "toggle_float";
-	  };
 	  float = {
 	    padding = 2;
 	    max_width = 0.6;
@@ -71,7 +71,7 @@
 	  };
 	};
       };
-      # lspconfig.enable = true;
+      lspconfig.enable = true;
       mini-completion = {
 	enable = true;
       };
@@ -135,4 +135,11 @@
     signcolumn = "yes";
     updatetime = 50;
   };
+  extraConfigLua = ''
+    -- Toggles a floating oil window in the parent directory
+    -- couldn't figure out how to do this in nixvim
+    vim.keymap.set("n", "\\", function()
+	require('oil').toggle_float()
+    end, {desc = 'Open parent dir in floating oil window'})
+  '';
 }

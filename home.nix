@@ -29,6 +29,7 @@ in
     ripgrep
     nil
     lua-language-server
+    typescript-language-server
     tailwindcss-language-server
     basedpyright
     emmet-language-server
