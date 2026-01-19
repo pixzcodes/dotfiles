@@ -22,7 +22,6 @@ in
     fastfetch
     pavucontrol
     lua
-    lua-language-server
     unzip
     fuzzel
     waybar
@@ -30,6 +29,10 @@ in
     neovim
     ripgrep
     nil
+    lua-language-server
+    tailwindcss-language-server
+    basedpyright
+    emmet-language-server
     nixfmt
     nodejs
     gcc
@@ -50,6 +53,10 @@ in
       cl = "clear && cd && fastfetch";
       fetch = "fastfetch";
     };
+  };
+  programs.nixvim = {
+    enable = true;
+    imports = [ ./config/nixvim.nix ];
   };
 
   xdg.configFile = builtins.mapAttrs (name: subpath: {
