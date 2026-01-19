@@ -66,6 +66,11 @@
     enable = true;
     package = pkgs.swayfx;
   };
+  programs.nixvim = {
+    enable = true;
+    imports = [ ./config/nixvim.nix ];
+  };
+
 
   fonts.packages = with pkgs; [
       nerd-fonts.jetbrains-mono

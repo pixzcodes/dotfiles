@@ -4,7 +4,7 @@ let
   create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
   configs = {
     sway = "sway";
-    nvim = "nvim";
+    # nvim = "nvim";
     foot = "foot";
     fuzzel = "fuzzel";
     waybar = "waybar";
@@ -26,7 +26,6 @@ in
     fuzzel
     waybar
     cargo
-    neovim
     ripgrep
     nil
     lua-language-server
@@ -54,11 +53,6 @@ in
       fetch = "fastfetch";
     };
   };
-  programs.nixvim = {
-    enable = true;
-    imports = [ ./config/nixvim.nix ];
-  };
-
   xdg.configFile = builtins.mapAttrs (name: subpath: {
     source = create_symlink "${dotfiles}/${subpath}";
     recursive = true;

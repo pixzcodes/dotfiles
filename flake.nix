@@ -25,7 +25,6 @@
         modules = [
           ./configuration.nix
           home-manager.nixosModules.home-manager
-	  nixvim.homeModules.nixvim
           {
             home-manager = {
               useGlobalPkgs = true;
@@ -34,6 +33,7 @@
               backupFileExtension = "backup";
             };
           }
+	  nixvim.nixosModules.nixvim
         ];
       };
     };
