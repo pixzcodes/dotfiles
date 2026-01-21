@@ -1,10 +1,10 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -44,8 +44,11 @@
   users.users.lostbyte = {
     isNormalUser = true;
     description = "Lost Byte";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
+    packages = with pkgs; [ ];
   };
 
   # Allow unfree packages
@@ -54,11 +57,11 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #  wget
-     firefox
-     foot
-     mako
+    #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    #  wget
+    firefox
+    foot
+    mako
   ];
 
   services.displayManager.ly.enable = true;
@@ -66,17 +69,15 @@
     enable = true;
     package = pkgs.swayfx;
   };
-  programs.nixvim = {
-    enable = true;
-    imports = [ ./config/nixvim.nix ];
-  };
-
 
   fonts.packages = with pkgs; [
-      nerd-fonts.jetbrains-mono
+    nerd-fonts.jetbrains-mono
   ];
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   system.stateVersion = "25.11"; # This is the one you don't change
 }

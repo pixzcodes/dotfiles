@@ -4,7 +4,7 @@ let
   create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
   configs = {
     sway = "sway";
-    # nvim = "nvim";
+    nvim = "nvim/nvim";
     foot = "foot";
     fuzzel = "fuzzel";
     waybar = "waybar";
@@ -21,19 +21,10 @@ in
   home.packages = with pkgs; [
     fastfetch
     pavucontrol
-    lua
     unzip
     fuzzel
     waybar
     cargo
-    ripgrep
-    nil
-    lua-language-server
-    typescript-language-server
-    tailwindcss-language-server
-    basedpyright
-    emmet-language-server
-    nixfmt
     nodejs
     gcc
     openssh
