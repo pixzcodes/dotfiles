@@ -4,7 +4,7 @@ let
   create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
   configs = {
     sway = "sway";
-    nvim = "nvim/nvim";
+    nvim = "nix-nvim/nvim";
     foot = "foot";
     fuzzel = "fuzzel";
     waybar = "waybar";

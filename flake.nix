@@ -6,6 +6,9 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-nvim = {
+      url = "path:/home/lostbyte/nixos-dotfiles/config/nix-nvim";
+    };
   };
 
   outputs =
@@ -13,6 +16,7 @@
       self,
       nixpkgs,
       home-manager,
+      nix-nvim,
       ...
     }:
     {
@@ -31,5 +35,8 @@
           }
         ];
       };
+      nixpkgs.overlays = [
+        nix-nvim.overlays.default
+      ];
     };
 }

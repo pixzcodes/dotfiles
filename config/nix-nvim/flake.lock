@@ -78,7 +78,6 @@
         "flake-compat": "flake-compat",
         "gitignore": "gitignore",
         "nixpkgs": [
-          "nix-nvim",
           "gen-luarc",
           "nixpkgs"
         ],
@@ -101,7 +100,6 @@
     "gitignore": {
       "inputs": {
         "nixpkgs": [
-          "nix-nvim",
           "gen-luarc",
           "git-hooks",
           "nixpkgs"
@@ -121,26 +119,6 @@
         "type": "github"
       }
     },
-    "home-manager": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1767048910,
-        "narHash": "sha256-KLFTeA/xquN+F3XHLAXcserk0L0nijbhzuldxNDF1eE=",
-        "owner": "nix-community",
-        "repo": "home-manager",
-        "rev": "d99b4ca5debaa082c7d76015aa2b7f3fc7e8b5f7",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nix-community",
-        "repo": "home-manager",
-        "type": "github"
-      }
-    },
     "luvit-meta": {
       "flake": false,
       "locked": {
@@ -155,23 +133,6 @@
         "owner": "Bilal2453",
         "repo": "luvit-meta",
         "type": "github"
-      }
-    },
-    "nix-nvim": {
-      "inputs": {
-        "flake-utils": "flake-utils",
-        "gen-luarc": "gen-luarc",
-        "nixpkgs": "nixpkgs_2"
-      },
-      "locked": {
-        "lastModified": 1768965493,
-        "narHash": "sha256-AE3R1U327xo6eI9wN+FrAjCkTIjGw+Igg7w8gMg8f4E=",
-        "path": "/home/lostbyte/nixos-dotfiles/config/nix-nvim",
-        "type": "path"
-      },
-      "original": {
-        "path": "/home/lostbyte/nixos-dotfiles/config/nix-nvim",
-        "type": "path"
       }
     },
     "nixpkgs": {
@@ -234,26 +195,11 @@
         "type": "github"
       }
     },
-    "nixpkgs_3": {
-      "locked": {
-        "lastModified": 1766902085,
-        "narHash": "sha256-coBu0ONtFzlwwVBzmjacUQwj3G+lybcZ1oeNSQkgC0M=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "c0b0e0fddf73fd517c3471e546c0df87a42d53f4",
-        "type": "github"
-      },
-      "original": {
-        "id": "nixpkgs",
-        "ref": "nixos-unstable",
-        "type": "indirect"
-      }
-    },
     "root": {
       "inputs": {
-        "home-manager": "home-manager",
-        "nix-nvim": "nix-nvim",
-        "nixpkgs": "nixpkgs_3"
+        "flake-utils": "flake-utils",
+        "gen-luarc": "gen-luarc",
+        "nixpkgs": "nixpkgs_2"
       }
     },
     "systems": {

@@ -62,6 +62,7 @@
     firefox
     foot
     mako
+    nvim-pkg
   ];
 
   services.displayManager.ly.enable = true;
