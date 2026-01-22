@@ -33,10 +33,12 @@
               backupFileExtension = "backup";
             };
           }
+          {
+            nixpkgs.overlays = [
+              nix-nvim.overlays.default
+            ];
+          }
         ];
       };
-      nixpkgs.overlays = [
-        nix-nvim.overlays.default
-      ];
     };
 }

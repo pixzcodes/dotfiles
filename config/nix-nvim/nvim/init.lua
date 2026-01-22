@@ -7,6 +7,8 @@ local opt = vim.o
 -- The default leader is '\'. Some people prefer <space>. Uncomment this if you do, too.
 -- vim.g.mapleader = ' '
 -- vim.g.maplocalleader = ' '
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
 
 -- See :h <option> to see what the options do
 
@@ -25,11 +27,12 @@ opt.spell = true
 opt.spelllang = 'en'
 
 opt.expandtab = true
-opt.tabstop = 2
-opt.softtabstop = 2
-opt.shiftwidth = 2
+opt.tabstop = 4
+opt.softtabstop = 4
+opt.shiftwidth = 4
 opt.foldenable = true
 opt.history = 2000
+opt.scrolloff = 8
 opt.nrformats = 'bin,hex' -- 'octal'
 opt.undofile = true
 opt.splitright = true
@@ -37,7 +40,7 @@ opt.splitbelow = true
 opt.cmdheight = 0
 
 opt.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
-opt.colorcolumn = '100'
+opt.colorcolumn = '80'
 
 -- Configure Neovim diagnostic messages
 

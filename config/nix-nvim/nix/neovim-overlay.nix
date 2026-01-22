@@ -83,12 +83,39 @@ with final.pkgs.lib; let
     # (mkNvimPlugin inputs.wf-nvim "wf.nvim") # (example) keymap hints | https://github.com/Cassin01/wf.nvim
     # ^ bleeding-edge plugins from flake inputs
     which-key-nvim
+
+    #
+    # Look and Feel
+    #
+    gruvbox-nvim
+    # everforest
+    neoscroll-nvim
+    todo-comments-nvim
+    nvim-highlight-colors
+    smear-cursor-nvim
+
+    #
+    # Functional
+    #
+    oil-nvim
+    mini-pairs
+    conform-nvim # maybe
   ];
 
   extraPackages = with pkgs; [
     # language servers, etc.
     lua-language-server
     nil # nix LSP
+    typescript-language-server
+    tailwindcss-language-server
+    basedpyright
+    prettierd
+    prettier
+    stylua
+    nixfmt
+
+    ripgrep
+    fd
   ];
 in {
   # This is the neovim derivation
