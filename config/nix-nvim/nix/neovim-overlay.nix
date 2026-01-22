@@ -93,7 +93,7 @@ with final.pkgs.lib; let
     neoscroll-nvim
     todo-comments-nvim
     nvim-highlight-colors
-    smear-cursor-nvim
+    # smear-cursor-nvim
 
     #
     # Functional
@@ -111,7 +111,7 @@ with final.pkgs.lib; let
     tailwindcss-language-server
     basedpyright
     prettierd
-    prettier
+    # prettier
     stylua
     nixfmt
   ];
