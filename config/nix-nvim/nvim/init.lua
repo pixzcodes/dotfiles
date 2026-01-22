@@ -10,6 +10,7 @@ local opt = vim.o
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+
 -- See :h <option> to see what the options do
 
 -- Search down into subfolders
@@ -38,6 +39,7 @@ opt.undofile = true
 opt.splitright = true
 opt.splitbelow = true
 opt.cmdheight = 0
+opt.termguicolors = true
 
 opt.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
 opt.colorcolumn = '80'

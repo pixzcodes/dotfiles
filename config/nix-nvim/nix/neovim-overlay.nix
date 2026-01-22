@@ -87,8 +87,9 @@ with final.pkgs.lib; let
     #
     # Look and Feel
     #
-    gruvbox-nvim
-    # everforest
+
+    # gruvbox-nvim
+    everforest
     neoscroll-nvim
     todo-comments-nvim
     nvim-highlight-colors
@@ -113,9 +114,6 @@ with final.pkgs.lib; let
     prettier
     stylua
     nixfmt
-
-    ripgrep
-    fd
   ];
 in {
   # This is the neovim derivation
