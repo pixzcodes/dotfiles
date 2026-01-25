@@ -5,10 +5,10 @@
     "height": 34, // Waybar height
     // "width": 1366, // Waybar width
     // Choose the order of the modules
-    "modules-left": ["sway/workspaces", "sway/submap"],
-    "modules-center": ["sway/window"],
+    "modules-left": ["hyprland/workspaces", "sway/submap"],
+    "modules-center": ["hyprland/window"],
     "modules-right": [ "cpu", "memory", "network", "pulseaudio", "battery", "tray", "clock"],
-    "sway/workspaces": {
+    "hyprland/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
         "format": "{name}",
@@ -35,7 +35,7 @@
 	     "9": [],
 	}
     },
-    "sway/submap": {
+    "hyprland/submap": {
         "format": "<span style=\"italic\">{}</span>"
     },
     "tray": {

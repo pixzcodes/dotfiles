@@ -1,9 +1,9 @@
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
   "logo": {
-    "type": "sixel",
-    "source": "~/.config/fetch-logos/vangogh_skel_cig.jpg",
-    "width": 24,
+    "type": "auto",
+    "source": "~/.config/fetch-logos/fern.txt",
+    "width": 4,
     //"height": 12,
     "padding": {
       "right": 2
@@ -43,13 +43,12 @@
     "memory",
     {
       "type": "disk",
-      "folders": "/"
+      "folders": ["/", "/home"]
     },
     {
       "type": "battery",
       "key": "Battery"
     },
-    "break",
     {
       "type": "colors",
       "paddingLeft": 10,

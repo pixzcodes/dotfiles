@@ -105,8 +105,9 @@ return {
                 "lua_ls",
                 "ts_ls",
                 "eslint",
-                "pyright",
+                "basedpyright",
                 "clangd",
+                "tailwindcss",
             },
             handlers = {
                 function(server_name)
