@@ -1,30 +1,29 @@
-
 * {
     border: none;
     border-radius: 0;
     font-family: "RobotoMonoNerdFont Regular";
-    font-size: 18px;
+    font-size: 14px;
     min-height: 0;
 }
-
 window#waybar {
-    background: #2A2A37;
+    background: transparent;
     color: #DCD7BA;
-    padding: 5px;
 }
-
 #window {
     font-weight: bold;
 }
+.modules-left {
+    border-radius: 20px;
+    padding: 0px 15px;
+}
 #workspaces {
     padding: 0px 5px;
+    margin-right: 20px;
 }
-
 #workspaces button {
     padding: 0px 2px;
-    margin: 5px 3px;
-    background: #363646;
-    border-bottom: solid 3px #957FB8;
+    margin: 0px 3px;
+    border-bottom: solid 3px #DCD7BA;
     color: #DCD7BA;
 }
 
@@ -32,40 +31,19 @@ window#waybar {
     border-bottom: none 
 }
 
-#workspaces button.focused {
-    color: #1F1F28;
-    background: #957FB8;
-    border-bottom: solid 3px #363646;
-    border-radius: 0px;
-}
-
-#submap {
-    background: #64727D;
-    border-bottom: 3px solid #D5D6C8;
+#workspaces button.active {
+    color: black;
+    background: #DCD7BA;
 }
 
 #clock, #battery, #cpu, #memory, #network, #pulseaudio, #custom-spotify, #tray, #mode {
-    background: #363646;
-    padding: 5px 12px;
+    padding: 0px 12px;
     margin: 3px 3px;
+    color: #DCD7BA;
 }
 
 #clock {
     font-weight: bold;
-    color: #FFA066;
-    border-bottom: solid 3px #FFA066;
-}
-
-#battery {
-    color: #957FB8;
-    border-bottom: solid 3px #957FB8;
-}
-
-#battery icon {
-    color: red;
-}
-
-#battery.charging {
 }
 
 @keyframes blink {
@@ -84,34 +62,6 @@ window#waybar {
     animation-direction: alternate;
 }
 
-#cpu {
-    color: #7FB4CA;
-    border-bottom: solid 3px #7FB4CA;
-}
-
-#memory {
-    color: #98BB6C;
-    border-bottom: solid 3px #98BB6C;
-}
-
-#network {
-    color: #E6C384;
-    border-bottom: solid 3px #E6C384;
-}
-
 #network.disconnected {
     color: red;
-    border-bottom: solid 3px red;
 }
-
-#pulseaudio {
-    color: #7AA89F;
-    border-bottom: solid 3px #7AA89F;
-}
-
-#pulseaudio.muted {
-}
-
-#tray {
-}
-

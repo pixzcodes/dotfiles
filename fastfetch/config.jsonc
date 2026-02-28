@@ -6,7 +6,7 @@
     "width": 4,
     //"height": 12,
     "padding": {
-      "right": 2
+      "right": 0
     },
     "recache": true
   },

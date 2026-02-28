@@ -2,41 +2,27 @@
     "layer": "top", // Waybar at top layer
     "reload_style_on_change": true,
     "position": "top", // Waybar at the bottom of your screen
-    "height": 34, // Waybar height
+    // "margin-top": 5,
+    // "height": 30, // Waybar height
     // "width": 1366, // Waybar width
     // Choose the order of the modules
-    "modules-left": ["hyprland/workspaces", "sway/submap"],
-    "modules-center": ["hyprland/window"],
+    "modules-left": ["hyprland/workspaces", "hyprland/window"],
+    "modules-center": [],
     "modules-right": [ "cpu", "memory", "network", "pulseaudio", "battery", "tray", "clock"],
     "hyprland/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
+	"warp-on-scroll": false,
         "format": "{name}",
-        "format-icons": {
-            "1": "1",
-            "2": "2",
-            "3": "3",
-            "4": "4",
-            "5": "5",
-            "6": "6",
-            "7": "7",
-            "8": "8",
-            "9": "9",
-        },
 	"persistent-workspaces": {
-             "1": [],
-	     "2": [],
-	     "3": [],
-	     "4": [],
-	     "5": [],
-	     "6": [],
-	     "7": [],
-	     "8": [],
-	     "9": [],
-	}
+	    "*": 5,    
+	    "HDMI-A-1": 2,
+	},
+	"persistent-only": true,
     },
-    "hyprland/submap": {
-        "format": "<span style=\"italic\">{}</span>"
+    "hyprland/window": {
+	"separate-outputs": false,
+	"format": "{class}"
     },
     "tray": {
         // "icon-size": 21,
@@ -56,8 +42,8 @@
         "bat": "BAT0",
         "states": {
             // "good": 95,
-            "warning": 30,
-            "critical": 15
+            "warning": 20,
+            "critical": 10
         },
         "format": "{capacity}% {icon}",
         // "format-good": "", // An empty format will hide the module
@@ -65,9 +51,7 @@
         "format-icons": ["", "", "", "", ""],
     },
     "network": {
-        // "interface": "wlp2s0", // (Optional) To force the use of this interface
-        "format-wifi": "Connected ({signalStrength}%) ",
-        "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
+        "format": "Online ",
         "format-disconnected": "Disconnected ⚠"
     },
     "pulseaudio": {
