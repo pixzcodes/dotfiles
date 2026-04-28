@@ -21,12 +21,13 @@ return {
             "c",
             "h",
             "hpp",
-	    "jsx",
-	    "js",
-	    "tsx",
-	    "ts",
-	    "html",
-	    "css",
+            "jsx",
+            "js",
+            "tsx",
+            "ts",
+            "html",
+            "css",
+            "go",
         }
         -- Create a keymap for vim.lsp.buf.implementation
         vim.api.nvim_create_autocmd('LspAttach', {
@@ -114,6 +115,7 @@ return {
                 "basedpyright",
                 "clangd",
                 "tailwindcss",
+                "gopls",
             },
             handlers = {
                 function(server_name)
