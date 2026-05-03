@@ -1,0 +1,1 @@
+/home/lostbyte/.config/zsh/custom/themes/typewritten/typewritten.zsh-theme
